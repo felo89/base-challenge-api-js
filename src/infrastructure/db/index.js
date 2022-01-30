@@ -1,13 +1,17 @@
 const mongoose = require('mongoose')
 
-function loadDBConnection({dbUri}) {
+function loadDBConnection({dbUri, dbUser, dbPass, dbName}) {
   let db = undefined
 
+  //TODO: pass as argument DB_CREDENTIALS
   return {
     start: async () => {
       db = await mongoose.connect(dbUri, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        user: dbUser,
+        pass: dbPass,
+        dbName: dbName,
       })
       console.log('- Connected to MongoDB')
     },
