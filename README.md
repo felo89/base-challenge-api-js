@@ -17,9 +17,12 @@ To run in dev mode with nodemon
 npm run dev
 ```
 
------------------
-This is a nodejs - simple application with a basic setup of a web server with mongodb connection and configuration for
-- lint
-- tests
-- build
-- dev
+## Testing
+To run all test run
+```
+npm run test
+```
+To run test with coverage run
+```
+npm run coverage
+```
