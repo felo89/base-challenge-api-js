@@ -1,4 +1,4 @@
-const { getProducts, getProductById } = require('./controllers/productController')
+const { getProducts, getProductById } = require('../controllers/productController')
 
 function loadRoutes(router) {
   router.get('/products', getProducts)

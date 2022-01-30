@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 function loadDBConnection({dbUri}) {
   let db = undefined
 
+  //TODO: pass as argument DB_CREDENTIALS
   return {
     start: async () => {
       db = await mongoose.connect(dbUri, {
