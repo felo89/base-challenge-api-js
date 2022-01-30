@@ -1,8 +1,8 @@
-const productsModel = require('../models/product')
+const { allProducts, productById } = require('../models/product')
 
 const getProducts = async ctx => {
   try {
-    const products = await productsModel.allProducts()
+    const products = await allProducts()
     ctx.status = 200
     ctx.body = products
   } catch (error) {
@@ -14,7 +14,7 @@ const getProducts = async ctx => {
 const getProductById = async ctx => {
   try {
     const productId = ctx.params.id
-    const product = await productsModel.productById(productId)
+    const product = await productById(productId)
     ctx.status = 200
     ctx.body = product
   } catch (error) {
