@@ -8,6 +8,9 @@ function loadDBConnection({dbUri}) {
       db = await mongoose.connect(dbUri, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        user: 'brandDiscountsUser',
+        pass: 'brandDiscountsPassword',
+        dbName: 'desafio_walmart'
       })
       console.log('- Connected to MongoDB')
     },
