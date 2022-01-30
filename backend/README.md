@@ -30,17 +30,17 @@ npm run coverage
 ## Endpoints
 The available endpoints are:
 
-To get all products
+To get all products `http://[host]:[port]/products`
 ```
 curl --request GET --url http://localhost:3000/products
 ```
 
-To get a product by id
+To get a product by id `http://[host]:[port]/product/[productId]`
 ```
 curl --request GET --url http://localhost:3000/product/3
 ```
 
-To get a discount bye brand name
+To get a discount bye brand name `http://[host]:[port]/discount/[brand]`
 ```
 curl --request GET --url http://localhost:3000/discount/Marca1
 ```
